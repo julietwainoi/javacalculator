@@ -1,32 +1,25 @@
-// abstract class
-abstract class Main {
-    public String name = "jane";
-    public int age = 4;
+interface Animal {
+    public void makesound();
 
-    public abstract void study();
-
+    public void sleep();
 }
 
-class Student extends Main {
-    public int id = 3;
+class Pig implements Animal {
 
-    public void study() {
-        System.out.println("Studying all the long");
+    public void makesound() {
+        System.out.println("whoooo");
+    };
 
-    }
-
+    public void sleep() {
+        System.out.println("zzz");
+    };
 }
 
-class Teacher {
-
+class Main {
     public static void main(String[] args) {
-
-        Student myobject = new Student();
-        System.out.println("mi id is: " + myobject.id);
-        System.out.println("my name is:" + myobject.name);
-        System.out.println("my age is:" + myobject.age);
-        myobject.study();
-
+        Pig myPig = new Pig();
+        myPig.makesound();
+        myPig.sleep();
     }
 
 }
