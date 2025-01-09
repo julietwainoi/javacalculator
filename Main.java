@@ -8,12 +8,16 @@ abstract class Main {
 }
 
 class Student extends Main {
-    private int id = 3;
+    public int id = 3;
 
     public void study() {
         System.out.println("Studying all the long");
 
     }
+
+}
+
+class Teacher {
 
     public static void main(String[] args) {
 
