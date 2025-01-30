@@ -1,15 +1,14 @@
-
-class Main {
-    static void checkAge(int age) {
-        if (age > 18) {
-            System.out.println("can vote");
-
-        } else {
-            System.out.println("can not vote");
-        }
-    }
+public class Main implements Runnable {
 
     public static void main(String[] args) {
-        checkAge(20);
+        Main obj = new Main();
+        Thread thread = new Thread(obj);
+        thread.start();
+        thread.isAlive();
+        System.out.println("this is not not a thread");
+    }
+
+    public void run() {
+        System.out.println("this is in a thread");
     }
 }
